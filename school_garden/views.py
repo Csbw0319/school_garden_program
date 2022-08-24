@@ -1,20 +1,20 @@
-from django.shortcuts import HttpResponse
-
+from django.shortcuts import render
+from django.template import loader
 # Create your views here.
 def index(request):
-    return HttpResponse("School Garden Program")
+    return render(request, 'index.html')
 
 def about(request):
-    return HttpResponse('About Page')
+    return render(request, 'about.html')
 
 def profile(request):
-    return HttpResponse('Profile Page')
+    return render(request, 'profile.html')
 
 def contact(request):
-    return HttpResponse('Contact Page')
+    return render(request, 'contact.html')
 
 def login(request):
-    return HttpResponse('Login page')
+    return render(request, 'login.html')
 
 def info(request):
-    return HttpResponse('School Gardens')
+    return render(request, 'info.html')

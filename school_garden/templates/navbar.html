@@ -1,5 +1,14 @@
 <div>
-    <span>Home</span>
-    <span>Profile</span>
-    <span></span>
+    {% url 'index' as index_url %}
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'index' %}">Home</a>{% endif %}</span>
+    {% url 'profile' as profile_url %}
+    <span>{% if request.path == profile_url %}Profile{% else %}<a href="{% url 'profile' %}">Profile</a>{% endif %}</span>
+    {% url 'login' as login_url %}
+    <span>{% if request.path == login_url %}Login{% else %}<a href="{% url 'login' %}">Login</a>{% endif %}</span>
+    {% url 'school gardens' as schoolgardens_url %}
+    <span>{% if request.path == info_url %}Info{% else %}<a href="{% url 'school gardens' %}">Info</a>{% endif %}</span>
+    {% url 'contact' as contact_url %}
+    <span>{% if request.path == contact_url %}Contact{% else %}<a href="{% url 'contact' %}">Contact</a>{% endif %}</span>
+    {% url 'about' as about_url %}
+    <span>{% if request.path == about_url %}About{% else %}<a href="{% url 'about' %}">About</a>{% endif %}</span>
 </div>
