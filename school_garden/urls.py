@@ -9,7 +9,7 @@ urlpatterns = [
    path('profile/', views.profile, name='profile'),
    path('about/', views.about, name='about'),
    path('contact/', views.contact, name='contact'),
-   path('info/', views.info, name='school gardens'),
+   path('info/', views.info, name='school-gardens'),
    path('accounts/profile', views.ProfileView.as_view(), name="profile"), 
 
    #Auth
