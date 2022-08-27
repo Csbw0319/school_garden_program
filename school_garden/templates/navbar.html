@@ -4,6 +4,7 @@
     <div class="navbar-brand">
         <img class='logo' src="https://static.wixstatic.com/media/e4f166_310436f1d3434cb4ab5b04d668b97c0c~mv2.png/v1/crop/x_55,y_65,w_982,h_960/fill/w_120,h_110,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo_01.png" alt="" width="60" height="60">
       <a id="navbar-item" href="/">Greenify</a>
+      </div>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -24,10 +25,20 @@
   </div>
   </div>
   </div>
+      {% if user.is_authenticated %}
+      {% url 'profile' as profile_url %}
+      <a id="navbar-login" href="{% url 'profile' %}">{{user.username}}</a>{% endif %}</span>
     <div class="navbar-menu navbar-end">
       <div id="icon">
       <i class="fa-solid fa-circle-user"></i>
       </div>
-    <a id="navbar-login" href="{% url 'profile' %}">Login</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" id="login-1" href="{% url 'profile' %}">
+         Login
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="{% url 'logout' %}">
+            Logout
+          </a>
     </div>
   </nav>

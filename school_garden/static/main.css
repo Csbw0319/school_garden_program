@@ -55,7 +55,7 @@ width:49vw;
     text-align: center;
 }
 .bottom-main-text{
-    margin-top: 60%;
+    margin-top: 45%;
     text-align: center;
 }
 .edible-learning-text{
@@ -67,9 +67,6 @@ width:49vw;
 .fa-solid .fa-circle-user{
     display: flex;
     align-items: center;
-}
-#icon{
-    margin-right: 8px;
 }
 .goals{
     opacity: .3;
@@ -138,6 +135,42 @@ margin: 10px;
     margin: 10px;
 }
 .image-gallary{
-    display: inline;
-    align-items: center;
+   margin: auto;
+   text-align: center;
+   display: inline-table;
+}
+.all-photos{
+    margin: auto;
+    text-align: center;
+}
+#contact{
+    display: block;
+    margin: auto;
+    height: 100px;
+}
+.contact-image{
+    opacity: .3;
+}
+.contact-title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.field{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+#more-button{
+    background-color: white;
+}
+.navbar-dropdown{
+    background-color: rgb(153, 205, 206);
+}
+.profile-title{
+    font-weight: bold;
+    font-size: 30px; 
+    margin-top: 20px;
 }
