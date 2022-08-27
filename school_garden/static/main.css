@@ -1,0 +1,143 @@
+.button{
+    background-color: rgb(153, 205, 206);
+}
+.navbar{
+    background-color: rgb(153, 205, 206);
+}
+.main-image{
+    display: flex;
+    position: relative;
+    float: right;
+    height: 90vh;
+    width: 40vw;
+    opacity: .9;
+}
+.logo{
+    margin: 0 0 0 15px;
+}
+#navbar-item{
+    margin: 0;
+}
+#navbar-login{
+    margin-right: 15px;
+}
+.navbar-item{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.section-second{
+height: 90vh;
+width:49vw;
+}
+.second-image{
+    display: flex;
+    position: relative;
+    float: left;
+    height: 100vh;
+    width: 100%;
+    top: -70px;
+    right: -45px;
+    opacity: .3;
+}
+#main-text{
+    position: absolute;
+    background-color: rgb(153, 205, 206);
+    top: 250px;
+    left: 15%;
+    border-radius: 8px;
+    height: 460px;
+    width: 30%;
+}
+.home-text{
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+}
+.bottom-main-text{
+    margin-top: 60%;
+    text-align: center;
+}
+.edible-learning-text{
+    margin-top: 10px;
+}
+.button{
+    margin-top: 20px;
+}
+.fa-solid .fa-circle-user{
+    display: flex;
+    align-items: center;
+}
+#icon{
+    margin-right: 8px;
+}
+.goals{
+    opacity: .3;
+    left: 20px;
+}
+.goals-image{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+}
+.goals-text{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.goals-paragraph{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.school-gardens-title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.info-logo{
+    opacity: .3;
+}
+.info-image{
+    display: block;
+    margin: auto;
+    height: 100px;
+}
+.image-1{
+height: 300px;
+width: 300px;
+margin: 10px;
+}
+.image-2{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+.image-3{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+.image-4{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+.image-5{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+.image-6{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+.image-gallary{
+    display: inline;
+    align-items: center;
+}

@@ -1,34 +1,33 @@
-<nav class="navbar is-expanded" role="navigation" aria-label="main navigation">
+{% load static %}
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <img class='logo' src="https://static.wixstatic.com/media/e4f166_310436f1d3434cb4ab5b04d668b97c0c~mv2.png/v1/crop/x_55,y_65,w_982,h_960/fill/w_120,h_110,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo_01.png" alt="" width="60" height="60">
+      <a id="navbar-item" href="/">Greenify</a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            School Gardens
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
-</nav>
+    <div class="navbar-menu navbar-end">
+        <a class="navbar-item" href="{% url 'index' %}">Home</a>
+    </div>
+    <div class="navbar-menu navbar-start">
+      <a class="navbar-item" href="{% url 'about' %}">About</a>
+  
+  <div class="navbar-menu navbar-start">
+      <a class="navbar-item" href="{% url 'school-gardens' %}">School Gardens</a>
+  
+  <div class="navbar-menu navbar-start">
+      <a class="navbar-item" href="{% url 'contact' %}">Contact</a>
+  </div>
+  </div>
+  </div>
+    <div class="navbar-menu navbar-end">
+      <div id="icon">
+      <i class="fa-solid fa-circle-user"></i>
+      </div>
+    <a id="navbar-login" href="{% url 'profile' %}">Login</a>
+    </div>
+  </nav>
