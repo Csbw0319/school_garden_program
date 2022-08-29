@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <!-- Security token -->
+    {% csrf_token %}
+ 
+    <!-- Using the formset -->
+   <p class="volunteer-form"> {{ volunteer_form }}
+   <input type="date">
+   </p>
+     <center>
+    <input class='button' type="submit" value="Submit">
+    </center>
+</form>
+{% endblock %}

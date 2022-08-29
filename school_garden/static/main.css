@@ -206,3 +206,20 @@ margin: 10px;
     margin: auto;
     margin-top: 20px;
 }
+.thankyou-button{
+    background-color: rgb(153, 205, 206);
+}
+.thankyou-text{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.volunteer-form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+.volunteer-button{
+    
+}
