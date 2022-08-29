@@ -7,5 +7,29 @@
 {% block content %}
 <div class="profile-title">
 <h1>{{user.username}}, Profile:</h1>
+<br />
+<!-- This page is to GET or populate all of the user scheduled dates -->
+<form action="" method="POST">
+    {% csrf_token %}
+    
+    <div class="schedule">
+    <h4 id="h4">Your Current Volunteer Schedule:</h4>
+    </div>
+    <!-- <div class="input-schedule">
+    <input type="text" placeholder="Enter Name">
+    </div>
+    <div class="input-schedule">
+    <input type="text" placeholder="Enter School Name">
+    </div>
+    <input class='input-schedule' type="date">
+    </div> -->
+
+
+
+    <!-- <div class="control">
+        <button class="button">Submit</button>
+      </div> -->
+</form>
+<a href="{% url 'create' %}"><button class="button" id="more-button">+</button></a>
 </div>
 {% endblock %}
