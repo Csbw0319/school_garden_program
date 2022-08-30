@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Volunteer{% endblock %}
+
+
+{% block content %}
+<div class="schedule-title">
+<h1>Your Volunteer Schedule:</h1>
+</div>
+{% for volunteer in volunteer_list %}
+{{ volunteer }}
+
+    <hr>
+    <li>School Name: {{ volunteer.school_name }}</li>
+    <li>First Name: {{ volunteer.first_name }}</li>
+
+    
+    <li>Last Name: {{ volunteer.last_name }}</li>
+    <li>Date: TBD</li>
+    
+   <button type="submit" value="Edit">Edit</button>
+   <button type="submit" value="Edit">Delete</button>
+
+</table>
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,11 +1,10 @@
-from http.client import HTTPResponse
 from django.shortcuts import render
-from django.template import loader
 from django.views.generic.base import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import School
-from .models import Volunteer
-from .forms import SchoolForm, VolunteerForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import School, Volunteer
+from .forms import VolunteerForm
+from django.http import HttpResponseRedirect
 # Create your views here.
 def index(request):
     print(request.user)
@@ -20,20 +19,26 @@ def contact(request):
 def info(request):
     return render(request, 'info.html')
 
-def profile(request):
-    return render(request, 'profile.html')
-
 def learnmore(request):
     return render(request, 'learnmore.html')
 
 def create(request):
-    all_volunteers = Volunteer.objects.all()
-    volunteer_form = VolunteerForm()
-    return render(request, 'create.html', {'all': all_volunteers, 'volunteer_form': volunteer_form})
+    submitted = False
+    if request.method == "POST":
+        form = VolunteerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/create?submitted=True')
+    else:
+        form = VolunteerForm
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'create.html', {'form': form, 'submitted': submitted})
 
 
-def edit(request):
-    return render(request, 'edit.html')
+def update_volunteer(request, volunteer_id):
+    volunteer = Volunteer.objects.get(pk=volunteer_id)
+    return render(request, 'update_volunteer', {'volunteer': volunteer})
 
 def delete(request):
     return render(request, 'delete.html')
@@ -41,12 +46,16 @@ def delete(request):
 def thankyou(request):
     return render(request, 'thankyou.html')
 
-def detail(request):
-    volunteer = Volunteer.objects.get()
-    volunteer_form = VolunteerForm()
-    return(request, 'detail.html', {
-        'volunteer': volunteer, 'volunteer_form': volunteer_form
-    })
+def volunteer(request):
+    volunteer_list = Volunteer.objects.all()
+    return render(request, 'accounts/volunteer.html', {'volunteer_list': volunteer_list})
+
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'accounts/profile.html'
+    model = Volunteer
+    volunteer_list = Volunteer.objects.all()
+    
+class VolunteerView(TemplateView):
+    template_name = 'accounts/volunteer.html'
+    model = VolunteerForm  

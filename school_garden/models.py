@@ -11,7 +11,7 @@ class School(models.Model):
 class Volunteer(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    school_name = models.ForeignKey(School, on_delete=models.CASCADE)
+    school_name = models.CharField(max_length=100)
 
 
 
