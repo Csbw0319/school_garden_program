@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method=POST>
+<form class='volunteer-form'action="" method=POST>
   {% csrf_token %}
   {{ form.as_table }}
-  <input type="submit" value="Submit">
+  <div class="control">
+    <button class="button">Submit</button>
 </form>
 
 {% endblock %}
